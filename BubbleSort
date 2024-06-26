@@ -1,0 +1,12 @@
+num = int(input("Enter your list in the format [x,y,z,...] :  "))
+print (num)
+
+def bs(num):
+  n = len(num)
+  for i in range(n):
+    for x in range (0, n-i-1):
+      if num[x] > num[x+1]:
+        num[x], num[x+1] = num[x+1], num[x]
+  return num
+
+print (bs(num))
